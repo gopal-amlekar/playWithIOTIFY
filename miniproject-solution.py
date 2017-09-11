@@ -141,4 +141,5 @@ except:
     print "Unexpected error:"
     raise
 finally:
+    GPIO.cleanup()
     print "Exiting Program"
