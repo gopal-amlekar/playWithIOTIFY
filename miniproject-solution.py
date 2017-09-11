@@ -134,9 +134,11 @@ try:
                 GPIO.output(led_tmp, GPIO.LOW) 
             
 except IOError as (errno, strerror):
-    print "\nI/O error({0}): {1}. Try changing I2C device number in code".format(errno, strerror)
+    print "I/O error({0}): {1}. Try changing I2C device number in code".format(errno, strerror)
 except KeyboardInterrupt:
-    print "\nTerminating Program"
+    print "Keyboard Interrupt Received"
 except:
     print "Unexpected error:"
     raise
+finally:
+    print "Exiting Program"
